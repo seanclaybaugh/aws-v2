@@ -1,44 +1,27 @@
-import { Routes, Route } from 'react-router-dom';
-
-import { Navigation, NavigationLink } from './Navigation';
-import { Page } from './Page';
-
 function Application() {
   return (
-    <main className="h-screen">
-      <h1 className="text-3xl font-bold bg-yellow-300 p-4 border-b-2 border-yellow-400">
-        Incredibly Important Thoughts
-      </h1>
-      <div className="grid grid-cols-12 grid-rows-1 gap-4 h-full">
-        <Navigation>
-          <NavigationLink to="/">Home</NavigationLink>
-          <NavigationLink to="/notes/hipster">Hipster Ipsum</NavigationLink>
-          <NavigationLink to="/notes/zombie">Zombie Ipsum</NavigationLink>
-          <NavigationLink to="/notes/cupcake">Cupcake Ipsum</NavigationLink>
-          <NavigationLink to="/notes/cheese">Cheese Ipsum</NavigationLink>
-          <NavigationLink to="/notes/cat">Cat Ipsum</NavigationLink>
-          <NavigationLink to="/notes/office">Office Ipsum</NavigationLink>
-          <NavigationLink to="/notes/beatles">The Beatles</NavigationLink>
-        </Navigation>
-        <section className="col-span-9 p-4">
-          <Routes>
-            <Route
-              path="/notes/beatles"
-              element={
-                <div>
-                  <img
-                    src="/beatles.jpg"
-                    alt="Possibly the Beatles, possibly"
-                  />
-                </div>
-              }
-            />
-            <Route path="/notes/:id" element={<Page />} />
-            <Route path="/" element={<p>Select a note.</p>} />
-          </Routes>
-        </section>
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
+        height: "100Vh",
+        fontFamily: "sans-serif",
+        padding: "5Vh",
+      }}
+    >
+      <h1 style={{ color: "red" }}>LOST CAT</h1>
+      <h2 style={{ color: "red" }}>REWARD OFFERED</h2>
+      <h2>Contact (925) 786-2402</h2>
+      <div>
+        <h3>Name: Saoirse</h3>
+        <h3>Breed: Female Black Domestic Shorthair</h3>
+        <h3>Green Eyes - Black fur with a white tuft on the lower belly </h3>
       </div>
-    </main>
+      <h3 style={{ color: "red" }}>Please call and do not approach! </h3>
+      <img src={require("./SAOIRSE.png")} alt={'Missing Cat - 925-786-2402'} style={{ height: 600, width: 350, borderRadius: 12 }} />
+    </div>
   );
 }
 
